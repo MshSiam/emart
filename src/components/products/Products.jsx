@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react"
+import Skeleton from "react-loading-skeleton"
+import css from "./product.css"
+import { NavLink } from "react-router-dom"
 
 const Products = () => {
   const [data, setData] = useState([])
@@ -24,32 +27,107 @@ const Products = () => {
   }, [])
 
   const Loading = () => {
-    return <>Loading .....</>
+    return (
+      <>
+        <div className="col-md-3">
+          <Skeleton height={350}></Skeleton>
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350}></Skeleton>
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350}></Skeleton>
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350}></Skeleton>
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350}></Skeleton>
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350}></Skeleton>
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350}></Skeleton>
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350}></Skeleton>
+        </div>
+        <div className="col-md-3">
+          <Skeleton height={350}></Skeleton>
+        </div>
+      </>
+    )
+  }
+
+  const filterProduct = (cat) => {
+    const updateList = data.filter((x) => x.category === cat)
+    setFilter(updateList)
   }
 
   const ShowProducts = () => {
     return (
       <>
         <div className="buttons">
-          <div className="btn btn-outline-dark me-2">All</div>
-          <div className="btn btn-outline-dark me-2">Men's Clothing</div>
-          <div className="btn btn-outline-dark me-2">Women's Clothing</div>
-          <div className="btn btn-outline-dark me-2">Jwelery Clothing</div>
-          <div className="btn btn-outline-dark me-2">Electronics Clothing</div>
+          <div
+            className="btn btn-outline-dark me-2"
+            onClick={() => {
+              setFilter()
+            }}>
+            All
+          </div>
+          <div
+            className="btn btn-outline-dark me-2"
+            onClick={() => {
+              filterProduct("men's clothing")
+            }}>
+            Men's Clothing
+          </div>
+          <div
+            className="btn btn-outline-dark me-2"
+            onClick={() => {
+              filterProduct("women's clothing")
+            }}>
+            Women's Clothing
+          </div>
+          <div
+            className="btn btn-outline-dark me-2"
+            onClick={() => {
+              filterProduct("jewelery")
+            }}>
+            Jwelery
+          </div>
+          <div
+            className="btn btn-outline-dark me-2"
+            onClick={() => {
+              filterProduct("electronics")
+            }}>
+            Electronics
+          </div>
         </div>
         {filter.map((product) => {
           return (
             <>
-              <div className="col-md-3">
-                <div className="card" key={product.id}>
-                  <img src={product.image} className="card-img-top" alt="..." />
-                  {product.title}
+              <div className="col-md-3  my-5">
+                <div className="card h-100 text-center  p-4" key={product.id}>
+                  <img
+                    src={product.image}
+                    className="card-img-top"
+                    alt="product image"
+                    height="260px"
+                  />
                   <div className="card-body">
-                    <h5 className="card-title">{product.title}</h5>
-                    <p className="card-text">{product.price}</p>
-                    <a href="#" className="btn btn-primary">
-                      Go somewhere
-                    </a>
+                    <h5 className="card-title mb-0 sss">
+                      {product.title.slice(0, 10)}...
+                    </h5>
+                    <p className="card-text ppp lead fw-bold">
+                      $ {product.price}
+                    </p>
+                    <NavLink
+                      to={`/products/${product.id}`}
+                      className="btn btn-primary">
+                      Buy Now
+                    </NavLink>
                   </div>
                 </div>
               </div>
