@@ -22,10 +22,16 @@ const Footer = () => {
             <a href="" className="me-4 text-reset">
               <i className="bi bi-google"></i>
             </a> */}
-            <a target="_blank" href="" className="me-4 text-reset">
+            <a
+              target="_blank"
+              href="https://www.instagram.com/siam_kenway/"
+              className="me-4 text-reset">
               <i className="bi bi-instagram"></i>
             </a>
-            <a target="_blank" href="" className="me-4 text-reset">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/muhammad-siam-77703520b/"
+              className="me-4 text-reset">
               <i className="bi bi-linkedin"></i>
             </a>
             <a
