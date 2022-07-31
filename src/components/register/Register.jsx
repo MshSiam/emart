@@ -10,7 +10,7 @@ const Register = () => {
       <div className="register container my-5 w-50 p-3">
         <form onSubmit={submitHandler}>
           <div className="mb-3">
-            <label for="userName" className="form-label">
+            <label htmlFor="userName" className="form-label">
               Name
             </label>
             <input
@@ -19,7 +19,7 @@ const Register = () => {
               id="userName"
               aria-describedby="userName"
             />
-            <label for="exampleInputEmail1" className="form-label">
+            <label htmlFor="exampleInputEmail1" className="form-label">
               Email address
             </label>
             <input
@@ -28,7 +28,7 @@ const Register = () => {
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
             />
-            <label for="userName" className="form-label">
+            <label htmlFor="userName" className="form-label">
               Present Address
             </label>
             <input
@@ -37,7 +37,7 @@ const Register = () => {
               id="userName"
               aria-describedby="userName"
             />
-            <label for="userName" className="form-label">
+            <label htmlFor="userName" className="form-label">
               Permanent Address
             </label>
             <input
@@ -46,7 +46,7 @@ const Register = () => {
               id="userName"
               aria-describedby="userName"
             />
-            <label for="phone" className="form-label">
+            <label htmlFor="phone" className="form-label">
               Contact No.
             </label>
             <input
@@ -61,7 +61,7 @@ const Register = () => {
             </div>
           </div>
           <div className="mb-3">
-            <label for="exampleInputPassword1" className="form-label">
+            <label htmlFor="exampleInputPassword1" className="form-label">
               Password
             </label>
             <input
@@ -69,7 +69,7 @@ const Register = () => {
               className="form-control mb-3"
               id="exampleInputPassword1"
             />
-            <label for="exampleConfirmtPassword1" className="form-label">
+            <label htmlFor="exampleConfirmtPassword1" className="form-label">
               Confirm Password
             </label>
             <input

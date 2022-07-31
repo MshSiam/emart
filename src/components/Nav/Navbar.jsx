@@ -8,19 +8,19 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light px-5  py-3 shadow-sm bg-white">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light px-5  py-3 shadow-sm bg-white">
         <NavLink className="navbar-brand fw-bold fs-4" to="/">
           Emart
         </NavLink>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -50,7 +50,7 @@ const Navbar = () => {
             <NavLink to="/login" className="btn btn-outline-dark">
               <i className="fa fa-sign-in me-2"> Login</i>
             </NavLink>
-            <NavLink to="/regsiter" className="btn btn-outline-dark ms-2">
+            <NavLink to="/register" className="btn btn-outline-dark ms-2">
               <i className="fa fa-user-plus me-2"> Register</i>
             </NavLink>
             <NavLink to="/cart" className="btn btn-outline-dark ms-2">
@@ -101,7 +101,7 @@ const Navbar = () => {
               <NavLink to="/login" className="btn btn-outline-dark">
                 <i className="fa fa-sign-in me-2"> Login</i>
               </NavLink>
-              <NavLink to="/regsiter" className="btn btn-outline-dark ms-2">
+              <NavLink to="/register" className="btn btn-outline-dark ms-2">
                 <i className="fa fa-user-plus me-2"> Register</i>
               </NavLink>
               <NavLink to="/cart" className="btn btn-outline-dark ms-2">
