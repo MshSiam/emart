@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet-async"
 import { NavLink } from "react-router-dom"
 
 const Register = () => {
@@ -7,6 +8,10 @@ const Register = () => {
   }
   return (
     <div>
+      <Helmet>
+        <title>Register -Emart</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
       <div className="register container my-5 w-50 p-3">
         <form onSubmit={submitHandler}>
           <div className="mb-3">

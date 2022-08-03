@@ -3,6 +3,7 @@ import { useParams, NavLink } from "react-router-dom"
 import Skeleton from "react-loading-skeleton"
 import { useSelector, useDispatch } from "react-redux/es/exports"
 import { addCart } from "../../redux/action"
+import { Helmet } from "react-helmet-async"
 
 const Product = () => {
   const { id } = useParams()
@@ -27,6 +28,10 @@ const Product = () => {
   const Loading = () => {
     return (
       <>
+        <Helmet>
+          <title>Products -Emart</title>
+          <link rel="canonical" href="https://www.tacobell.com/" />
+        </Helmet>
         <div className="col-md-6">
           <Skeleton height={400} width={300} />
         </div>

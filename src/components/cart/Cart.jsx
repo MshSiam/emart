@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet-async"
 import { useDispatch, useSelector } from "react-redux/es/exports"
 import { NavLink } from "react-router-dom"
 import { addCart, delCart } from "../../redux/action"
@@ -20,13 +21,19 @@ const Cart = () => {
   //   empty Cart
   const emptyCart = () => {
     return (
-      <div className="px-4 my-5 bg-light rounded-3 py-5">
-        <div className="container py-4">
-          <div className="row">
-            <h3>Your Cart is Empty</h3>
+      <>
+        <Helmet>
+          <title>Cart -Emart</title>
+          <link rel="canonical" href="https://www.tacobell.com/" />
+        </Helmet>
+        <div className="px-4 my-5 bg-light rounded-3 py-5">
+          <div className="container py-4">
+            <div className="row">
+              <h3>Your Cart is Empty</h3>
+            </div>
           </div>
         </div>
-      </div>
+      </>
     )
   }
   const cartItems = (product) => {

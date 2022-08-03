@@ -9,12 +9,15 @@ import "react-loading-skeleton/dist/skeleton.css"
 import { Provider } from "react-redux"
 import store from "./redux/reducers/store"
 import "bootstrap-icons/font/bootstrap-icons.css"
+import { HelmetProvider } from "react-helmet-async"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
-  <Provider store={store}>
-    <App />
-  </Provider>
+  <HelmetProvider>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </HelmetProvider>
 )
 
 // If you want to start measuring performance in your app, pass a function

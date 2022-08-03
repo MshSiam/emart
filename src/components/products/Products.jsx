@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import Skeleton from "react-loading-skeleton"
 import css from "./product.css"
 import { NavLink } from "react-router-dom"
+import { Helmet } from "react-helmet-async"
 
 const Products = () => {
   const [data, setData] = useState([])
@@ -29,6 +30,10 @@ const Products = () => {
   const Loading = () => {
     return (
       <>
+        <Helmet>
+          <title>Products -Emart</title>
+          <link rel="canonical" href="https://www.tacobell.com/" />
+        </Helmet>
         <div className="col-md-3">
           <Skeleton height={350}></Skeleton>
         </div>

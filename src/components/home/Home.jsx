@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet-async"
 import Products from "../products/Products"
 import css from "./home.css"
 // import bg from "../../assets/hand-holding-shopping-bags-plain-background_23-2148286215"
@@ -6,6 +7,10 @@ import css from "./home.css"
 const Home = () => {
   return (
     <>
+      <Helmet>
+        <title>Home -Emart</title>
+        <link rel="canonical" href="https://www.tacobell.com/" />
+      </Helmet>
       <div className="hero">
         <div className="card text-bg-dark border-0">
           <img
