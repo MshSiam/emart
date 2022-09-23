@@ -7,9 +7,10 @@ This is fullstack web application using react js, styled components, axios, node
 
 ## Features
 
-- Fully Responsive  
+- This website is fully Responsive for desktop, tablet and mobile devices.
+- Any user can filter the products by categories.
 - Any user add products to his cart don't need to login / signup.
-- User can see his cart details and order.
+- User can see his cart details, increase, decrease or delete products from the cartr.
 
 
 
